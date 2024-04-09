@@ -1,0 +1,49 @@
+{
+	"name": "khobor",
+	"version": "0.0.1",
+	"private": false,
+	"author": {
+		"name": "Sharukhi",
+		"email": "sharukhi@sharukhi.xyz",
+		"url": "https://app.khobor.sharukhi.xyz"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sharukhi/khobor"
+	},
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "3.1.0",
+		"@sveltejs/kit": "2.4.3",
+		"@sveltejs/vite-plugin-svelte": "^3.0.1",
+		"autoprefixer": "^10.4.16",
+		"postcss": "^8.4.32",
+		"postcss-load-config": "^5.0.2",
+		"svelte": "4.2.9",
+		"svelte-check": "3.6.3",
+		"tailwindcss": "^3.3.6",
+		"typescript": "5.2.2",
+		"vite": "5.0.12"
+	},
+	"dependencies": {
+		"@kinde-oss/kinde-auth-sveltekit": "^1.3.0",
+		"bits-ui": "^0.20.0",
+		"clsx": "^2.1.0",
+		"crypto-js": "^4.2.0",
+		"iconify-icon": "^2.0.0",
+		"lucide-svelte": "^0.363.0",
+		"mode-watcher": "^0.3.0",
+		"node-fetch": "^3.3.2",
+		"svelte-routing": "^2.12.0",
+		"svelte-sonner": "^0.3.21",
+		"tailwind-merge": "^2.2.2",
+		"tailwind-variants": "^0.2.1"
+	},
+	"type": "module"
+}
