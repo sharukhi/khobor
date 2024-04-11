@@ -1,23 +1,33 @@
 <script lang="ts">
   //@ts-nocheck
   import * as Avatar from "$lib/components/ui/avatar"
-  import * as DropdownMenu from "$lib/components/ui/dropdown-menu"
+  import "iconify-icon"
   import { Skeleton } from "$lib/components/ui/skeleton"
   import arrow from "$lib/static/icons/right.png"
   import * as Sheet from "$lib/components/ui/sheet"
-  import { page } from "$app/stores"
-  import unauthorized from "$lib/static/icons/unauthorized.svg"
+  import MD5 from "crypto-js/md5"
+  import * as AlertDialog from "$lib/components/ui/alert-dialog"
+  import Button from "$lib/components/ui/button/button.svelte"
 
-  // https://www.gravatar.com/avatar/3ef0678c1307a33515fd55d26d97a790?d=https%3A%2F%2Fui-avatars.com%2Fapi%2F/sharukhi@sharukhi.xyz
+  export let data
 
-  let news
-  let error
+  let avatar
+  let email_md5 = MD5(data.userProfile.email).toString()
 
   const getNews = async () => {
     const res = await fetch("https://api.khobor.sharukhi.xyz/news")
     const data = await res.json()
     return data
   }
+
+  const getGravatar = async () => {
+    const response = await fetch(
+      `https://www.gravatar.com/avatar/${email_md5}?d=https%3A%2F%2Fui-avatars.com%2Fapi%2F/${data.userProfile.email}`,
+    )
+    avatar = response.url
+  }
+
+  getGravatar()
   getNews()
 </script>
 
@@ -31,54 +41,53 @@
           <div class="mr-auto">
             <Sheet.Root>
               <Sheet.Trigger>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="black"
-                    d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1m0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1M3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1"
-                  />
-                </svg></Sheet.Trigger
+                <iconify-icon icon="pepicons-pop:menu"
+                ></iconify-icon></Sheet.Trigger
               >
               <Sheet.Content side="left">
                 <Sheet.Header>
                   <div
-                    class="grid grid-cols-1 gap-2 text-left text-base text-gray-100"
+                    class="grid grid-cols-1 gap-1 my-1 mx-1 text-left text-base black"
                   >
-                    <div>Account</div>
-                    <div>Settings</div>
-                    <div>About</div>
-                    <div>Sign out</div>
-                  </div>
-                </Sheet.Header>
+                    <div>
+                      <Button href="/s/account/" variant="ghost">
+                        <iconify-icon icon="bx:user" class="mr-1"
+                        ></iconify-icon> Account
+                      </Button>
+                    </div>
+                    <div>
+                      <Button href="/s/settings/" variant="ghost">
+                        <iconify-icon icon="uil:setting" class="mr-1"
+                        ></iconify-icon> Settings
+                      </Button>
+                    </div>
+                    <div>
+                      <Button href="/s/about/" variant="ghost">
+                        <iconify-icon
+                          icon="material-symbols:info-outline"
+                          class="mr-1"
+                        ></iconify-icon> About
+                      </Button>
+                    </div>
+                    <div>
+                      <Button variant="ghost" href="/api/auth/logout/">
+                        <iconify-icon icon="uil:signout" class="mr-1"
+                        ></iconify-icon>
+                        Sign out</Button
+                      >
+                    </div>
+                  </div></Sheet.Header
+                >
               </Sheet.Content>
             </Sheet.Root>
           </div>
           <nav class="space-x-2 md:flex text-sm font-medium items-center">
-            <DropdownMenu.Root>
-              <DropdownMenu.Trigger>
-                <Avatar.Root class="h-8 w-8">
-                  <Avatar.Image
-                    referrerpolicy="no-referrer"
-                    src="https://www.gravatar.com/avatar/3ef0678c1307a33515fd55d26d97a790?d=https%3A%2F%2Fui-avatars.com%2Fapi%2F/sharukhi@sharukhi.xyz"
-                  />
-                  <Avatar.Fallback>
-                    <Skeleton class="h-8 w-8 rounded-full" />
-                  </Avatar.Fallback>
-                </Avatar.Root>
-              </DropdownMenu.Trigger>
-              <DropdownMenu.Content>
-                <DropdownMenu.Group>
-                  <DropdownMenu.Label>Account</DropdownMenu.Label>
-                  <DropdownMenu.Separator />
-                  <DropdownMenu.Item>About</DropdownMenu.Item>
-                  <DropdownMenu.Item>Sign out</DropdownMenu.Item>
-                </DropdownMenu.Group>
-              </DropdownMenu.Content>
-            </DropdownMenu.Root>
+            <Avatar.Root class="h-8 w-8">
+              <Avatar.Image referrerpolicy="no-referrer" src={avatar} />
+              <Avatar.Fallback>
+                <Skeleton class="h-8 w-8 rounded-full" />
+              </Avatar.Fallback>
+            </Avatar.Root>
           </nav>
         </div>
       </div>

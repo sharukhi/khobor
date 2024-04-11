@@ -1,49 +1,37 @@
 <script>
   import { page } from "$app/stores"
-  import error_img from "$lib/static/icons/error.svg"
+  import Button from "$lib/components/ui/button/button.svelte"
 </script>
 
-<section class="bg-white dark:bg-gray-900">
-  <div
-    class="container min-h-screen px-6 py-12 mx-auto lg:flex lg:items-center lg:gap-12"
-  >
-    <div class="wf-ull lg:w-1/2">
-      <p class="text-sm font-medium text-blue-500 dark:text-blue-400">ERROR</p>
-      <h1
-        class="mt-3 text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl"
-      >
-        {$page.error?.message}
-      </h1>
-      <p class="mt-4 text-gray-500 dark:text-gray-400">
-        Sorry, if you are seeing this page, it means that something went wrong.
-      </p>
-
-      <div class="flex items-center mt-6 gap-x-3">
-        <button
-          class="flex items-center justify-center w-1/2 px-5 py-2 text-sm text-gray-700 transition-colors duration-200 bg-white border rounded-lg gap-x-2 sm:w-auto dark:hover:bg-gray-800 dark:bg-gray-900 hover:bg-gray-100 dark:text-gray-200 dark:border-gray-700"
+<main
+  class="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8"
+>
+  <div class="text-center">
+    <p class="text-base font-semibold black">ERROR</p>
+    <h1
+      class="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl"
+    >
+      {$page.error?.message}
+    </h1>
+    <p class="mt-6 text-base leading-7 text-gray-600">
+      Sorry, if you are seeing this page, it means that something went wrong.
+    </p>
+    <div class="mt-10 flex items-center justify-center gap-x-6">
+      <Button>
+        <a
+          href="/"
+          class="rounded-md black px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+          >Go back</a
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-5 h-5 rtl:rotate-180"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
-            />
-          </svg>
-
-          <a href="/"><span>Go back</span></a>
-        </button>
-      </div>
-    </div>
-
-    <div class="relative w-full mt-12 lg:w-1/2 lg:mt-0">
-      <img class="w-full max-w-lg lg:mx-auto" src={error_img} alt="ERROR" />
+      </Button>
+      <Button variant="secondary">
+        <a
+          href="mailto:sharukhi@sharukhi.xyz"
+          target="_blank"
+          class="text-sm font-semibold"
+          >Contact support <span aria-hidden="true">&rarr;</span></a
+        >
+      </Button>
     </div>
   </div>
-</section>
+</main>
