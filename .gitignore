@@ -24,3 +24,5 @@ home/.vercel
 home/.output
 home/vite.config.js.timestamp-*
 home/vite.config.ts.timestamp-*
+
+/api/

@@ -6,6 +6,7 @@ export async function load({ request }) {
 	let userProfile = null
 	if (isAuthenticated) {
 		userProfile = await kindeAuthClient.getUser(request)
+		
 	} else {
 		// Need to implement, e.g: redirect user to sign in, etc..
 	}

@@ -32,6 +32,9 @@ dependencies:
   node-fetch:
     specifier: ^3.3.2
     version: 3.3.2
+  svelte-device-info:
+    specifier: ^1.0.4
+    version: 1.0.4
   svelte-routing:
     specifier: ^2.12.0
     version: 2.12.0
@@ -1607,6 +1610,12 @@ packages:
       - stylus
       - sugarss
     dev: true
+
+  /svelte-device-info@1.0.4:
+    resolution: {integrity: sha512-opbq4rrJEpWMIM08H7gDbheN+0dlK1gMyJj4vG303pncmC81AvNKFLWMTf/eYJ4GIEZqPHTVJ8NqYtpsus5Heg==}
+    dependencies:
+      tslib: 2.6.2
+    dev: false
 
   /svelte-hmr@0.15.3(svelte@4.2.9):
     resolution: {integrity: sha512-41snaPswvSf8TJUhlkoJBekRrABDXDMdpNpT2tfHIv4JuhgvHqLMhEPGtaQn0BmbNSTkuz2Ed20DF2eHw0SmBQ==}
