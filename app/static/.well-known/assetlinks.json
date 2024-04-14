@@ -1,0 +1,14 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "app.khobor.sharukhi.xyz",
+            "sha256_cert_fingerprints": [
+                "1B:69:A3:87:F8:38:0E:3F:9D:B8:AF:63:6E:9F:45:C0:AC:A9:5D:FA:30:12:B0:80:99:7C:B5:55:7A:73:CD:3E"
+            ]
+        }
+    }
+]
