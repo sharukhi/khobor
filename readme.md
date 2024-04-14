@@ -1,4 +1,4 @@
-![](/home/public/og.png)
+![](app/static/cover.png)
 
 # Khobor
 
@@ -10,19 +10,29 @@ Cut through the clutter and stay informed with the latest news. Dive deeper into
 
 Khobor is a news app that helps you to cut through the clutter and stay informed with the latest news.
 
+---
+
+### Screenshots
+
+<img src="app\static\preview.png" width="auto"/>
+
+---
+
 ### Setup Locally
 
-#### First install the dependencies
+First install the dependencies
 
 ```bash
 pnpm install
 ```
 
-#### and then start the development server
+and then start the development server
 
 ```bash
 pnpm run dev
 ```
+
+---
 
 ### Licence
 

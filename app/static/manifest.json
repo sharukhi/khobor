@@ -6,47 +6,33 @@
     "background_color": "#ffffff",
     "display": "standalone",
     "orientation": "any",
-    "scope": "/app",
-    "start_url": "/app",
+    "scope": "/",
+    "start_url": "/",
     "screenshots": [
         {
-            "src": "/pwa/screenshots/wide_1.png",
-            "sizes": "1920x1080",
-            "type": "image/png",
-            "form_factor": "wide",
-            "label": "Screenshot"
-        },
-        {
-            "src": "/pwa/screenshots/wide_2.png",
-            "sizes": "1920x1080",
-            "type": "image/png",
-            "form_factor": "wide",
-            "label": "Screenshot"
-        },
-        {
-            "src": "/pwa/screenshots/wide_3.png",
-            "sizes": "1920x1080",
-            "type": "image/png",
-            "form_factor": "wide",
-            "label": "Screenshot"
-        },
-        {
-            "src": "/pwa/screenshots/narrow_1.png",
-            "sizes": "1080x1920",
+            "src": "/pwa/screenshots/1.png",
+            "sizes": "1125x2436",
             "type": "image/png",
             "form_factor": "narrow",
             "label": "Screenshot"
         },
         {
-            "src": "/pwa/screenshots/narrow_2.png",
-            "sizes": "1080x1920",
+            "src": "/pwa/screenshots/2.png",
+            "sizes": "1125x2436",
             "type": "image/png",
             "form_factor": "narrow",
             "label": "Screenshot"
         },
         {
-            "src": "/pwa/screenshots/narrow_3.png",
-            "sizes": "1080x1920",
+            "src": "/pwa/screenshots/3.png",
+            "sizes": "1125x2436",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "Screenshot"
+        },
+        {
+            "src": "/pwa/screenshots/4.png",
+            "sizes": "1125x2436",
             "type": "image/png",
             "form_factor": "narrow",
             "label": "Screenshot"
@@ -54,19 +40,9 @@
     ],
     "icons": [
         {
-            "src": "/pwa/android/android-launchericon-192-192.png",
+            "src": "/icon.png",
             "type": "image/png",
-            "sizes": "192x192"
-        },
-        {
-            "src": "/pwa/android/android-launchericon-512-512.png",
-            "type": "image/png",
-            "sizes": "512x512"
-        },
-        {
-            "src": "/pwa/android/android-launchericon-144-144.png",
-            "type": "image/png",
-            "sizes": "144x144"
+            "size": "1000x1000"
         }
     ]
 }

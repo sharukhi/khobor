@@ -5,7 +5,7 @@
 <div class="flex flex-col min-h-[100dvh]">
   <header class="px-4 lg:px-6 h-14 flex items-center">
     <a class="flex items-center justify-center" href="/">
-      <img src="/khobor.ico" class="h-9 w-9" alt="logo" />
+      <img src="/khobor.svg" class="h-7 w-7" alt="logo" />
       <span class="sr-only">Khobor</span>
     </a>
   </header>
@@ -52,7 +52,7 @@
           -->
         </div>
         <!-- svelte-ignore a11y-img-redundant-alt -->
-        <img src="/mockups/mockup_2.png" alt="Image" class="h-90" />
+        <img src="/home.png" alt="Image" class="h-[650px]" />
       </div>
     </section>
   </main>
