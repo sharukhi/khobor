@@ -26,3 +26,9 @@ home/vite.config.js.timestamp-*
 home/vite.config.ts.timestamp-*
 
 /api/
+
+android/android.keystore
+android/app-release-signed.apk
+android/app-release-bundle.aab
+android/app-release-signed.apk.idsig
+android/app-release-unsigned-aligned.apk
