@@ -13,9 +13,7 @@
   let email_md5 = MD5(data.userProfile.email).toString()
 
   const getGravatar = async () => {
-    const response = await fetch(
-      `https://www.gravatar.com/avatar/${email_md5}?d=https%3A%2F%2Fui-avatars.com%2Fapi%2F/${data.userProfile.email}`,
-    )
+    const response = await fetch(`https://www.gravatar.com/avatar/${email_md5}`)
     avatar = response.url
   }
 
@@ -86,18 +84,7 @@
               </div>
             </div>
           </div>
-          <div class="space-y-2">
-            <p
-              class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-            >
-              Name
-            </p>
-            <p
-              class="text-sm font-medium tracking-tight text-gray-500 dark:text-gray-400"
-            >
-              {data.userProfile.name}
-            </p>
-          </div>
+
           <div class="space-y-2">
             <p
               class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -108,6 +95,30 @@
               class="text-sm font-medium tracking-tight text-gray-500 dark:text-gray-400"
             >
               {data.userProfile.email}
+            </p>
+          </div>
+          <div class="space-y-2">
+            <p
+              class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            >
+              Password
+            </p>
+            <p
+              class="text-sm font-medium tracking-tight text-gray-500 dark:text-gray-400"
+            >
+              Coming soon
+            </p>
+          </div>
+          <div class="space-y-2">
+            <p
+              class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            >
+              Country
+            </p>
+            <p
+              class="text-sm font-medium tracking-tight text-gray-500 dark:text-gray-400"
+            >
+              Coming soon
             </p>
           </div>
           <div class="space-y-2">

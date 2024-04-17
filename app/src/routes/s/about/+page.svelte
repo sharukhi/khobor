@@ -28,7 +28,7 @@
           class="grid grid-cols-1 place-content-center place-items-center mx-4"
         >
           <div class="bg-white mt-14 rounded-3xl shadow-md mb-5">
-            <img src="/khobor_text.png" alt="Icon" class="h-[120px]" />
+            <img src="/khobor.svg" alt="Icon" class="h-[120px]" />
           </div>
           <div><h3 class="black font-bold text-2xl">Khobor</h3></div>
 
