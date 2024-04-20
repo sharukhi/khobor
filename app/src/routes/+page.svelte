@@ -24,7 +24,7 @@
 
   const getGravatar = async () => {
     const response = await fetch(
-      `https://www.gravatar.com/avatar/${email_md5}?d=https%3A%2F%2Fui-avatars.com%2Fapi%2F/${data.userProfile.email}`,
+      `https://secure.gravatar.com/avatar/${email_md5}`,
     )
     avatar = response.url
   }
@@ -79,8 +79,25 @@
                           Sign out</Button
                         >
                       </div>
-                    </div></Sheet.Header
-                  >
+                    </div>
+                    <!-- WARNING -->
+                    <div
+                      class="mt-12 mb-2 text-left grid grid-cols-1 place-items-left text-[#E72929]"
+                    >
+                      <h1 class="text-sm mt-5">
+                        <br /><b>Keep in mind</b><br />
+                        that Khobor is still in its early phases, thus many issues
+                        might arise and certain features might not even be finished.So
+                        feel free to report them
+                        <a
+                          href="mailto:sharukhi@sharukhi.xyz"
+                          target="_blank"
+                          class="underline">here.</a
+                        >
+                      </h1>
+                    </div>
+                    <!-- WARNING END-->
+                  </Sheet.Header>
                 </Sheet.Content>
               </Sheet.Root>
             </div>
@@ -114,49 +131,23 @@
           </div>
         {:then data}
           <!-- 1st -->
-          <!-- WARNING -->
-          <div
-            class="mt-12 mb-2 text-center grid grid-cols-1 place-items-center text-[#E72929]"
-          >
-            <h1 class="text-sm mt-5">
-              <br /><b>Remember</b><br /> that Khobor is still in its early
-              stages, so there may be a lot of problems. Feel free to report
-              them
-              <a
-                href="mailto:sharukhi@sharukhi.xyz"
-                target="_blank"
-                class="underline">here.</a
-              >
-            </h1>
-          </div>
-          <!-- WARNING END-->
+
           <div
             class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-3 mt-10"
           >
             <div class="w-full max-w-screen-xl px-4 py-6 mx-auto">
               <div class="border border-gray-200 rounded-lg bg-white">
-                <img
-                  src={data.news[0].image}
-                  width="320"
-                  height="180"
-                  alt="News article"
-                  class="object-cover w-full h-full rounded-t-lg"
-                  style="aspect-ratio: 320 / 180; object-fit: cover;"
-                />
                 <div class="p-4">
                   <h3 class="text-lg font-semibold line-clamp-2">
-                    <a href={data.news[0].url} target="_blank">
-                      {data.news[0].title}
+                    <a href={data[0].url} target="_blank">
+                      {data[0].title}
                     </a>
                   </h3>
                   <p class="text-sm text-gray-500 line-clamp-3">
-                    {data.news[0].text}
+                    {data[0].description}
                   </p>
                   <div>
-                    <a
-                      class="text-gray-800"
-                      href={data.news[0].url}
-                      target="_blank"
+                    <a class="text-gray-800" href={data[0].url} target="_blank"
                       >Read more
                       <img class="h-4 w-4" src={arrow} /></a
                     >
@@ -168,28 +159,17 @@
             <!-- 2nd -->
             <div class="w-full max-w-screen-xl px-4 py-6 mx-auto">
               <div class="border border-gray-200 rounded-lg bg-white">
-                <img
-                  src={data.news[1].image}
-                  width="320"
-                  height="180"
-                  alt="News article"
-                  class="object-cover w-full h-full rounded-t-lg"
-                  style="aspect-ratio: 320 / 180; object-fit: cover;"
-                />
                 <div class="p-4">
                   <h3 class="text-lg font-semibold line-clamp-2">
-                    <a href={data.news[1].url} target="_blank">
-                      {data.news[1].title}
+                    <a href={data[1].url} target="_blank">
+                      {data[1].title}
                     </a>
                   </h3>
                   <p class="text-sm text-gray-500 line-clamp-3">
-                    {data.news[1].text}
+                    {data[1].description}
                   </p>
                   <div>
-                    <a
-                      class="text-gray-800"
-                      href={data.news[1].url}
-                      target="_blank"
+                    <a class="text-gray-800" href={data[1].url} target="_blank"
                       >Read more
                       <img class="h-4 w-4" src={arrow} /></a
                     >
@@ -201,28 +181,17 @@
             <!-- 3rd -->
             <div class="w-full max-w-screen-xl px-4 py-6 mx-auto">
               <div class="border border-gray-200 rounded-lg bg-white">
-                <img
-                  src={data.news[2].image}
-                  width="320"
-                  height="180"
-                  alt="News article"
-                  class="object-cover w-full h-full rounded-t-lg"
-                  style="aspect-ratio: 320 / 180; object-fit: cover;"
-                />
                 <div class="p-4">
                   <h3 class="text-lg font-semibold line-clamp-2">
-                    <a href={data.news[2].url} target="_blank">
-                      {data.news[2].title}
+                    <a href={data[2].url} target="_blank">
+                      {data[2].title}
                     </a>
                   </h3>
                   <p class="text-sm text-gray-500 line-clamp-3">
-                    {data.news[2].text}
+                    {data[2].description}
                   </p>
                   <div>
-                    <a
-                      class="text-gray-800"
-                      href={data.news[2].url}
-                      target="_blank"
+                    <a class="text-gray-800" href={data[2].url} target="_blank"
                       >Read more
                       <img class="h-4 w-4" src={arrow} /></a
                     >
@@ -234,34 +203,17 @@
             <!-- 4th -->
             <div class="w-full max-w-screen-xl px-4 py-6 mx-auto">
               <div class="border border-gray-200 rounded-lg bg-white">
-                <a
-                  class="block w-full h-48 aspect-poster overflow-hidden rounded-t-lg"
-                  href={data.news[3].url}
-                  target="_blank"
-                >
-                  <img
-                    src={data.news[3].image}
-                    width="320"
-                    height="180"
-                    alt="News article"
-                    class="object-cover w-full h-full rounded-t-lg"
-                    style="aspect-ratio: 320 / 180; object-fit: cover;"
-                  />
-                </a>
                 <div class="p-4">
                   <h3 class="text-lg font-semibold line-clamp-2">
-                    <a href={data.news[3].url} target="_blank">
-                      {data.news[3].title}
+                    <a href={data[3].url} target="_blank">
+                      {data[3].title}
                     </a>
                   </h3>
                   <p class="text-sm text-gray-500 line-clamp-3">
-                    {data.news[3].text}
+                    {data[3].description}
                   </p>
                   <div>
-                    <a
-                      class="text-gray-800"
-                      href={data.news[3].url}
-                      target="_blank"
+                    <a class="text-gray-800" href={data[3].url} target="_blank"
                       >Read more
                       <img class="h-4 w-4" src={arrow} /></a
                     >
@@ -273,34 +225,17 @@
             <!-- 5th -->
             <div class="w-full max-w-screen-xl px-4 py-6 mx-auto">
               <div class="border border-gray-200 rounded-lg bg-white">
-                <a
-                  class="block w-full h-48 aspect-poster overflow-hidden rounded-t-lg"
-                  href={data.news[4].url}
-                  target="_blank"
-                >
-                  <img
-                    src={data.news[4].image}
-                    width="320"
-                    height="180"
-                    alt="News article"
-                    class="object-cover w-full h-full rounded-t-lg"
-                    style="aspect-ratio: 320 / 180; object-fit: cover;"
-                  />
-                </a>
                 <div class="p-4">
                   <h3 class="text-lg font-semibold line-clamp-2">
-                    <a href={data.news[4].url} target="_blank">
-                      {data.news[4].title}
+                    <a href={data[4].url} target="_blank">
+                      {data[4].title}
                     </a>
                   </h3>
                   <p class="text-sm text-gray-500 line-clamp-3">
-                    {data.news[4].text}
+                    {data[4].description}
                   </p>
                   <div>
-                    <a
-                      class="text-gray-800"
-                      href={data.news[4].url}
-                      target="_blank"
+                    <a class="text-gray-800" href={data[4].url} target="_blank"
                       >Read more
                       <img class="h-4 w-4" src={arrow} /></a
                     >
@@ -312,34 +247,17 @@
             <!-- 6th -->
             <div class="w-full max-w-screen-xl px-4 py-6 mx-auto">
               <div class="border border-gray-200 rounded-lg bg-white">
-                <a
-                  class="block w-full h-48 aspect-poster overflow-hidden rounded-t-lg"
-                  href={data.news[5].url}
-                  target="_blank"
-                >
-                  <img
-                    src={data.news[5].image}
-                    width="320"
-                    height="180"
-                    alt="News article"
-                    class="object-cover w-full h-full rounded-t-lg"
-                    style="aspect-ratio: 320 / 180; object-fit: cover;"
-                  />
-                </a>
                 <div class="p-4">
                   <h3 class="text-lg font-semibold line-clamp-2">
-                    <a href={data.news[5].url} target="_blank">
-                      {data.news[5].title}
+                    <a href={data[5].url} target="_blank">
+                      {data[5].title}
                     </a>
                   </h3>
                   <p class="text-sm text-gray-500 line-clamp-3">
-                    {data.news[5].text}
+                    {data[5].description}
                   </p>
                   <div>
-                    <a
-                      class="text-gray-800"
-                      href={data.news[5].url}
-                      target="_blank"
+                    <a class="text-gray-800" href={data[5].url} target="_blank"
                       >Read more
                       <img class="h-4 w-4" src={arrow} /></a
                     >
@@ -351,34 +269,17 @@
             <!-- 7th -->
             <div class="w-full max-w-screen-xl px-4 py-6 mx-auto">
               <div class="border border-gray-200 rounded-lg bg-white">
-                <a
-                  class="block w-full h-48 aspect-poster overflow-hidden rounded-t-lg"
-                  href={data.news[6].url}
-                  target="_blank"
-                >
-                  <img
-                    src={data.news[6].image}
-                    width="320"
-                    height="180"
-                    alt="News article"
-                    class="object-cover w-full h-full rounded-t-lg"
-                    style="aspect-ratio: 320 / 180; object-fit: cover;"
-                  />
-                </a>
                 <div class="p-4">
                   <h3 class="text-lg font-semibold line-clamp-2">
-                    <a href={data.news[6].url} target="_blank">
-                      {data.news[6].title}
+                    <a href={data[6].url} target="_blank">
+                      {data[6].title}
                     </a>
                   </h3>
                   <p class="text-sm text-gray-500 line-clamp-3">
-                    {data.news[6].text}
+                    {data[6].description}
                   </p>
                   <div>
-                    <a
-                      class="text-gray-800"
-                      href={data.news[6].url}
-                      target="_blank"
+                    <a class="text-gray-800" href={data[6].url} target="_blank"
                       >Read more
                       <img class="h-4 w-4" src={arrow} /></a
                     >
@@ -390,34 +291,17 @@
             <!-- 8th -->
             <div class="items-start w-full max-w-screen-xl px-4 py-6 mx-auto">
               <div class="border border-gray-200 rounded-lg bg-white">
-                <a
-                  class="block w-full h-48 aspect-poster overflow-hidden rounded-t-lg"
-                  href={data.news[7].url}
-                  target="_blank"
-                >
-                  <img
-                    src={data.news[7].image}
-                    width="320"
-                    height="180"
-                    alt="News article"
-                    class="object-cover w-full h-full rounded-t-lg"
-                    style="aspect-ratio: 320 / 180; object-fit: cover;"
-                  />
-                </a>
                 <div class="p-4">
                   <h3 class="text-lg font-semibold line-clamp-2">
-                    <a href={data.news[7].url} target="_blank">
-                      {data.news[7].title}
+                    <a href={data[7].url} target="_blank">
+                      {data[7].title}
                     </a>
                   </h3>
                   <p class="text-sm text-gray-500 line-clamp-3">
-                    {data.news[7].text}
+                    {data[7].description}
                   </p>
                   <div>
-                    <a
-                      class="text-gray-800"
-                      href={data.news[7].url}
-                      target="_blank"
+                    <a class="text-gray-800" href={data[7].url} target="_blank"
                       >Read more
                       <img class="h-4 w-4" src={arrow} /></a
                     >
@@ -429,34 +313,17 @@
             <!-- 9th -->
             <div class="items-start w-full max-w-screen-xl px-4 py-6 mx-auto">
               <div class="border border-gray-200 rounded-lg bg-white">
-                <a
-                  class="block w-full h-48 aspect-poster overflow-hidden rounded-t-lg"
-                  href={data.news[8].url}
-                  target="_blank"
-                >
-                  <img
-                    src={data.news[8].image}
-                    width="320"
-                    height="180"
-                    alt="News article"
-                    class="object-cover w-full h-full rounded-t-lg"
-                    style="aspect-ratio: 320 / 180; object-fit: cover;"
-                  />
-                </a>
                 <div class="p-4">
                   <h3 class="text-lg font-semibold line-clamp-2">
-                    <a href={data.news[8].url} target="_blank">
-                      {data.news[8].title}
+                    <a href={data[8].url} target="_blank">
+                      {data[8].title}
                     </a>
                   </h3>
                   <p class="text-sm text-gray-500 line-clamp-3">
-                    {data.news[8].text}
+                    {data[8].description}
                   </p>
                   <div>
-                    <a
-                      class="text-gray-800"
-                      href={data.news[8].url}
-                      target="_blank"
+                    <a class="text-gray-800" href={data[8].url} target="_blank"
                       >Read more
                       <img class="h-4 w-4" src={arrow} /></a
                     >
@@ -465,45 +332,6 @@
               </div>
             </div>
             <!-- 9th END-->
-            <!-- 10th -->
-            <div class="items-start w-full max-w-screen-xl px-4 py-6 mx-auto">
-              <div class="border border-gray-200 rounded-lg bg-white">
-                <a
-                  class="block w-full h-48 aspect-poster overflow-hidden rounded-t-lg"
-                  href={data.news[9].url}
-                  target="_blank"
-                >
-                  <img
-                    src={data.news[9].image}
-                    width="320"
-                    height="180"
-                    alt="News article"
-                    class="object-cover w-full h-full rounded-t-lg"
-                    style="aspect-ratio: 320 / 180; object-fit: cover;"
-                  />
-                </a>
-                <div class="p-4">
-                  <h3 class="text-lg font-semibold line-clamp-2">
-                    <a href={data.news[9].url} target="_blank">
-                      {data.news[9].title}
-                    </a>
-                  </h3>
-                  <p class="text-sm text-gray-500 line-clamp-3">
-                    {data.news[9].text}
-                  </p>
-                  <div>
-                    <a
-                      class="text-gray-800"
-                      href={data.news[9].url}
-                      target="_blank"
-                      >Read more
-                      <img class="h-4 w-4" src={arrow} /></a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- 10th END-->
           </div>
         {/await}
       </main>
