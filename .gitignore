@@ -4,8 +4,6 @@ app/build
 app/.svelte-kit
 app/package
 app/.env
-app/.env.*
-app/!.env.example
 app/.vercel
 app/.output
 app/vite.config.js.timestamp-*
@@ -18,13 +16,15 @@ home/build
 home/.svelte-kit
 home/package
 home/.env
-home/.env.*
-home/!.env.example
 home/.vercel
 home/.output
 home/vite.config.js.timestamp-*
 home/vite.config.ts.timestamp-*
 
+/api/.env
+/api/*.json
+/api/*.json
+/api/khobor_env/
 /api/
 
 android/android.keystore
