@@ -24,8 +24,7 @@ home/vite.config.ts.timestamp-*
 /api/.env
 /api/*.json
 /api/*.json
-/api/khobor_env/
-/api/
+/api/env/
 
 android/android.keystore
 android/app-release-signed.apk

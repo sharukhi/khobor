@@ -12,12 +12,6 @@ Khobor is a news app that helps you to cut through the clutter and stay informed
 
 ---
 
-### Screenshots
-
-<img src="app\static\preview.png" width="auto"/>
-
----
-
 ### Setup Locally
 
 First install the dependencies
