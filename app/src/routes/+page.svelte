@@ -45,7 +45,10 @@
                 <iconify-icon icon="pepicons-pop:menu" style="color: #bcc1d5"
                 ></iconify-icon></Sheet.Trigger
               >
-              <Sheet.Content side="left" class="bg-[#0e1116]">
+              <Sheet.Content
+                side="left"
+                class="bg-[#0e1116] border-0 text-[#feffff]"
+              >
                 <Sheet.Header>
                   <div
                     class="grid grid-cols-1 gap-1 my-1 mx-1 text-left text-base black"
@@ -54,7 +57,7 @@
                       <Button
                         href="/s/account/"
                         variant="ghost"
-                        class="text-[#feffff]"
+                        class="text-[#feffff] hover:bg-[#1b2026] hover:text-[#feffff]"
                       >
                         <iconify-icon icon="bx:user" class="mr-1"
                         ></iconify-icon> Account
@@ -64,7 +67,7 @@
                       <Button
                         href="/s/settings/"
                         variant="ghost"
-                        class="text-[#feffff]"
+                        class="text-[#feffff] hover:bg-[#1b2026] hover:text-[#feffff]"
                       >
                         <iconify-icon icon="uil:setting" class="mr-1"
                         ></iconify-icon> Settings
@@ -74,7 +77,7 @@
                       <Button
                         href="/s/about/"
                         variant="ghost"
-                        class="text-[#feffff]"
+                        class="text-[#feffff] hover:bg-[#1b2026] hover:text-[#feffff]"
                       >
                         <iconify-icon
                           icon="material-symbols:info-outline"
@@ -85,7 +88,7 @@
                     <div>
                       <Button
                         variant="ghost"
-                        class="text-[#feffff]"
+                        class="text-[#feffff] hover:bg-[#1b2026] hover:text-[#feffff]"
                         href="/api/auth/logout/"
                       >
                         <iconify-icon icon="uil:signout" class="mr-1"
@@ -113,11 +116,12 @@
     <Modal
       bind:open={defaultModal}
       class="bg-[#0e1116] border-[#2f3237] border-2"
+      autoclose
     >
       <div
         class="mt-12 mb-2 text-center grid grid-cols-1 place-items-left text-[#d97e35]"
       >
-        <h1 class="text-sm mt-5 mb-10">
+        <h1 class="text-sm mb-10">
           <br /><b>Keep in mind</b><br />
           that Khobor is still in its early phases, thus many issues might arise
           and certain features might not even be finished.So feel free to report
@@ -128,24 +132,35 @@
             class="underline">here.</a
           >
         </h1>
+        <Button class="bg-[#1b2024]">Close</Button>
       </div>
     </Modal>
 
     <main>
       {#await getNews()}
         <div
-          class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-3 w-full max-w-screen-xl px-4 py-6 mx-auto"
+          class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-2 mt-10"
         >
-          <Skeleton class="h-[200px] w-[400px] rounded-lg" />
-          <Skeleton class="h-[200px] w-[400px] rounded-lg" />
-          <Skeleton class="h-[200px] w-[400px] rounded-lg" />
-          <Skeleton class="h-[200px] w-[400px] rounded-lg" />
-          <Skeleton class="h-[200px] w-[400px] rounded-lg" />
-          <Skeleton class="h-[200px] w-[400px] rounded-lg" />
-          <Skeleton class="h-[200px] w-[400px] rounded-lg" />
-          <Skeleton class="h-[200px] w-[400px] rounded-lg" />
-          <Skeleton class="h-[200px] w-[400px] rounded-lg" />
-          <Skeleton class="h-[200px] w-[400px] rounded-lg" />
+          <div class="w-full max-w-screen-xl px-4 py-6 mx-auto">
+            <Skeleton
+              class="h-[200px] w-[385px] rounded-md opacity-5 bg-[#2f3237]"
+            />
+          </div>
+          <div class="w-full max-w-screen-xl px-4 py-6 mx-auto">
+            <Skeleton
+              class="h-[200px] w-[385px] rounded-md opacity-5 bg-[#2f3237]"
+            />
+          </div>
+          <div class="w-full max-w-screen-xl px-4 py-6 mx-auto">
+            <Skeleton
+              class="h-[200px] w-[385px] rounded-md opacity-5 bg-[#2f3237]"
+            />
+          </div>
+          <div class="w-full max-w-screen-xl px-4 py-6 mx-auto">
+            <Skeleton
+              class="h-[200px] w-[385px] rounded-md opacity-5 bg-[#2f3237]"
+            />
+          </div>
         </div>
       {:then data}
         <!-- 1st -->
@@ -156,9 +171,7 @@
             <div class="border-solid border-[#1f2227] border-2 rounded-lg">
               <div class="p-4">
                 <h3 class="text-lg font-semibold line-clamp-2 text-[#feffff]">
-                  <a href={data[0].url} target="_blank">
-                    {data[0].title}
-                  </a>
+                  {data[0].title}
                 </h3>
                 <p class="text-sm text-[#bdc4d7] line-clamp-3">
                   {data[0].description}
@@ -177,9 +190,7 @@
             <div class="border-solid border-[#1f2227] border-2 rounded-lg">
               <div class="p-4">
                 <h3 class="text-lg font-semibold line-clamp-2 text-[#feffff]">
-                  <a href={data[1].url} target="_blank">
-                    {data[1].title}
-                  </a>
+                  {data[1].title}
                 </h3>
                 <p class="text-sm text-[#bdc4d7] line-clamp-3">
                   {data[1].description}
@@ -198,9 +209,7 @@
             <div class="border-solid border-[#1f2227] border-2 rounded-lg">
               <div class="p-4">
                 <h3 class="text-lg font-semibold line-clamp-2 text-[#feffff]">
-                  <a href={data[2].url} target="_blank">
-                    {data[2].title}
-                  </a>
+                  {data[2].title}
                 </h3>
                 <p class="text-sm text-[#bdc4d7] line-clamp-3">
                   {data[2].description}
@@ -219,9 +228,7 @@
             <div class="border-solid border-[#1f2227] border-2 rounded-lg">
               <div class="p-4">
                 <h3 class="text-lg font-semibold line-clamp-2 text-[#feffff]">
-                  <a href={data[3].url} target="_blank">
-                    {data[3].title}
-                  </a>
+                  {data[3].title}
                 </h3>
                 <p class="text-sm text-[#bdc4d7] line-clamp-3">
                   {data[3].description}
@@ -240,9 +247,7 @@
             <div class="border-solid border-[#1f2227] border-2 rounded-lg">
               <div class="p-4">
                 <h3 class="text-lg font-semibold line-clamp-2 text-[#feffff]">
-                  <a href={data[4].url} target="_blank">
-                    {data[4].title}
-                  </a>
+                  {data[4].title}
                 </h3>
                 <p class="text-sm text-[#bdc4d7] line-clamp-3">
                   {data[4].description}
@@ -261,9 +266,7 @@
             <div class="border-solid border-[#1f2227] border-2 rounded-lg">
               <div class="p-4">
                 <h3 class="text-lg font-semibold line-clamp-2 text-[#feffff]">
-                  <a href={data[5].url} target="_blank">
-                    {data[5].title}
-                  </a>
+                  {data[5].title}
                 </h3>
                 <p class="text-sm text-[#bdc4d7] line-clamp-3">
                   {data[5].description}
@@ -282,9 +285,7 @@
             <div class="border-solid border-[#1f2227] border-2 rounded-lg">
               <div class="p-4">
                 <h3 class="text-lg font-semibold line-clamp-2 text-[#feffff]">
-                  <a href={data[6].url} target="_blank">
-                    {data[6].title}
-                  </a>
+                  {data[6].title}
                 </h3>
                 <p class="text-sm text-[#bdc4d7] line-clamp-3">
                   {data[6].description}
@@ -303,9 +304,7 @@
             <div class="border-solid border-[#1f2227] border-2 rounded-lg">
               <div class="p-4">
                 <h3 class="text-lg font-semibold line-clamp-2 text-[#feffff]">
-                  <a href={data[7].url} target="_blank">
-                    {data[7].title}
-                  </a>
+                  {data[7].title}
                 </h3>
                 <p class="text-sm text-[#bdc4d7] line-clamp-3">
                   {data[7].description}
@@ -324,9 +323,7 @@
             <div class="border-solid border-[#1f2227] border-2 rounded-lg">
               <div class="p-4">
                 <h3 class="text-lg font-semibold line-clamp-2 text-[#feffff]">
-                  <a href={data[8].url} target="_blank">
-                    {data[8].title}
-                  </a>
+                  {data[8].title}
                 </h3>
                 <p class="text-sm text-[#bdc4d7] line-clamp-3">
                   {data[8].description}

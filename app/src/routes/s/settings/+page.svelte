@@ -5,8 +5,8 @@
 
 <div class="h-screen flex items-center justify-center">
   <div class="grid place-content-center mx-4">
-    <h1 class="font-semibold text-lg mb-3">Coming Soon</h1>
-    <Button variant="outline" href="/"
+    <h1 class="font-semibold text-lg mb-3 text-[#feffff]">Coming Soon</h1>
+    <Button class="bg-[#1b2026] border-[#2f343a] border-2" href="/"
       ><iconify-icon icon="ic:round-arrow-back" class="mr-2"></iconify-icon>
       Go back
     </Button>

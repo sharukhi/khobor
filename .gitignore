@@ -21,11 +21,6 @@ home/.output
 home/vite.config.js.timestamp-*
 home/vite.config.ts.timestamp-*
 
-/api/.env
-/api/*.json
-/api/*.json
-/api/env/
-
 android/android.keystore
 android/app-release-signed.apk
 android/app-release-bundle.aab

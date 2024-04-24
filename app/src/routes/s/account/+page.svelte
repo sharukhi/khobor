@@ -21,26 +21,26 @@
 </script>
 
 <html lang="en">
-  <nav class="fixed inset-x-0 top-0 z-50 bg-white">
+  <nav class="fixed inset-x-0 top-0 z-50 bg-[#0e1116]">
     <div class="px-4 md:px-6">
       <div class="flex h-14 items-center">
         <div class="mr-auto">
           <a href="/"
-            ><iconify-icon icon="ic:round-arrow-back" class="mr-2"
+            ><iconify-icon
+              icon="ic:round-arrow-back"
+              class="mr-2 text-[#feffff]"
             ></iconify-icon></a
           >
         </div>
       </div>
     </div>
   </nav>
-  <body>
+  <body class="bg-[#0e1116]">
     <div class="flex items-center justify-center">
-      <div
-        class="rounded-lg bg-card text-card-foreground shadow-sm w-full max-w-3xl"
-      >
+      <div class="rounded-lg bg-card shadow-sm w-full max-w-3xl">
         <div class="flex flex-col p-6 space-y-1"></div>
-        <div class="p-6 space-y-4">
-          <div class="flex items-center space-x-4">
+        <div class="p-6 space-y-4 bg-[#0e1116]">
+          <div class="flex items-center space-x-4 bg-[#0e1116]">
             <div class="relative rounded-full overflow-hidden">
               <Avatar.Root class="h-12 w-12">
                 <Avatar.Image referrerpolicy="no-referrer" src={avatar} />
@@ -51,19 +51,21 @@
             </div>
             <div class="space-y-2.5">
               <div class="flex items-center space-x-2">
-                <h3 class="text-sm font-medium tracking-tight">
+                <h3 class="text-sm font-medium tracking-tight text-[#feffff]">
                   {data.userProfile.email}
                 </h3>
 
                 <AlertDialog.Root>
                   <AlertDialog.Trigger>
                     <button
-                      class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3"
+                      class="text-[#feffff] bg-[#1b2026] border-[#2f343a] border-2 inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3"
                     >
                       Edit
                     </button></AlertDialog.Trigger
                   >
-                  <AlertDialog.Content>
+                  <AlertDialog.Content
+                    class="text-[#feffff] bg-[#0e1116]  border-0 "
+                  >
                     <AlertDialog.Header>
                       <AlertDialog.Title>Update gravatar</AlertDialog.Title>
                       <AlertDialog.Description>
@@ -72,8 +74,10 @@
                       </AlertDialog.Description>
                     </AlertDialog.Header>
                     <AlertDialog.Footer>
-                      <AlertDialog.Cancel>Cancel</AlertDialog.Cancel>
-                      <AlertDialog.Action
+                      <AlertDialog.Cancel class="bg-[#1b2024] border-0"
+                        >Cancel</AlertDialog.Cancel
+                      >
+                      <AlertDialog.Action class="bg-[#1b2024]"
                         ><a href="https://gravatar.com/" target="_blank"
                           >Open gravatar</a
                         ></AlertDialog.Action
@@ -87,48 +91,48 @@
 
           <div class="space-y-2">
             <p
-              class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-[#feffff]"
             >
               Email
             </p>
             <p
-              class="text-sm font-medium tracking-tight text-gray-500 dark:text-gray-400"
+              class="text-sm font-medium tracking-tight dark:text-gray-400 text-[#bdc4d7]"
             >
               {data.userProfile.email}
             </p>
           </div>
           <div class="space-y-2">
             <p
-              class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-[#feffff]"
             >
               Password
             </p>
             <p
-              class="text-sm font-medium tracking-tight text-gray-500 dark:text-gray-400"
+              class="text-sm font-medium tracking-tight dark:text-gray-400 text-[#bdc4d7]"
             >
               Coming soon
             </p>
           </div>
           <div class="space-y-2">
             <p
-              class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-[#feffff]"
             >
               Country
             </p>
             <p
-              class="text-sm font-medium tracking-tight text-gray-500 dark:text-gray-400"
+              class="text-sm font-medium tracking-tight text-[#bdc4d7] dark:text-gray-400"
             >
               Coming soon
             </p>
           </div>
           <div class="space-y-2">
             <p
-              class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-[#feffff]"
             >
               Subscription
             </p>
             <p
-              class="text-sm font-medium tracking-tight text-gray-500 dark:text-gray-400"
+              class="text-sm font-medium tracking-tight text-[#bdc4d7] dark:text-gray-400"
             >
               Coming soon
             </p>
