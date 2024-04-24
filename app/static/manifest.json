@@ -2,10 +2,10 @@
     "name": "Khobor",
     "short_name": "Khobor",
     "description": "Cut through the clutter and stay informed with the latest news. Dive deeper into the topics that matters most to you",
-    "theme_color": "#ffffff",
+    "theme_color": "#0e1116",
     "background_color": "#ffffff",
     "display": "standalone",
-    "orientation": "any",
+    "orientation": "portrai",
     "scope": "/",
     "start_url": "/",
     "screenshots": [

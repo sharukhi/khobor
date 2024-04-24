@@ -132,7 +132,9 @@
             class="underline">here.</a
           >
         </h1>
-        <Button class="bg-[#1b2024]">Close</Button>
+        <Button class="bg-[#1b2024]  hover:bg-[#1b2026] hover:text-[#feffff]"
+          >Close</Button
+        >
       </div>
     </Modal>
 
