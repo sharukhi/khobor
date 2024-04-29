@@ -1,7 +1,16 @@
-// src/hooks.server.ts
-import { sessionHooks, type Handler } from "@kinde-oss/kinde-auth-sveltekit";
-export const handle: Handler = async ({ event, resolve }) => {
-sessionHooks({ event });
-const response = await resolve(event);
-return response;
-};
+
+import { UserScope , handleLogto } from '@logto/sveltekit';
+import { env } from '$env/dynamic/private';
+
+export const handle = handleLogto(
+  {
+    endpoint: env.LOGTO_ENDPOINT as string,
+    appId: env.LOGTO_APP_ID as string,
+    appSecret: env.LOGTO_APP_SECRET as string,
+    scopes: [UserScope.Email]
+  },
+  {
+    encryptionKey: env.LOGTO_COOKIE_ENCRYPTION_KEY as string,
+  },  
+);
+

@@ -11,7 +11,7 @@ import json
 
 
 app = Flask(__name__)
-google_news = GNews(max_results=9, period='7d')
+google_news = GNews(max_results=30, period='7d')
 
 
 

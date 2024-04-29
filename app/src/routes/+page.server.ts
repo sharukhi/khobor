@@ -1,17 +1,11 @@
-import { kindeAuthClient } from '@kinde-oss/kinde-auth-sveltekit'
-import { request } from '@sveltejs/kit'
+// +page.server.ts
+import type { Actions } from './$types';
 
-export async function load({ request }) {
-	const isAuthenticated = await kindeAuthClient.isAuthenticated(request) // Boolean: true or false
-	let userProfile = null
-	if (isAuthenticated) {
-		userProfile = await kindeAuthClient.getUser(request)
-		
-	} else {
-		// Need to implement, e.g: redirect user to sign in, etc..
-	}
-	return {
-		isAuthenticated,
-		userProfile
-	}
-}
+export const actions: Actions = {
+  signIn: async ({ locals }) => {
+    await locals.logtoClient.signIn('http://localhost:3000/callback');
+  },
+  signOut: async ({ locals }) => {
+    await locals.logtoClient.signOut('http://localhost:3000/');
+  },
+};

@@ -12,7 +12,7 @@
       >
         {$page.error?.message}
       </h1>
-      <p class="mt-6 text-base leading-7 text-gray-600">
+      <p class="mt-6 text-base leading-7 text-[#feffff]">
         Sorry, if you are seeing this page, it means that something went wrong.
       </p>
       <div class="mt-10 flex items-center justify-center gap-x-6">

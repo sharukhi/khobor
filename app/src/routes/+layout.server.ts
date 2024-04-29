@@ -1,18 +1,5 @@
-import {kindeAuthClient, type SessionManager} from '@kinde-oss/kinde-auth-sveltekit';
-import {redirect, type RequestEvent} from '@sveltejs/kit';
+import type { LayoutServerLoad } from './$types';
 
-export async function load({request}: RequestEvent) {
-	const isAuthenticated = await kindeAuthClient.isAuthenticated(
-		request as unknown as SessionManager
-	); 
-	if (isAuthenticated) {
-	
-	} else {
-		redirect(302, '/api/auth/login/'); 
-	}
-
-
-	return {
-		isAuthenticated
-	};
-}
+export const load: LayoutServerLoad = async ({ locals }) => {
+  return { user: locals.user };
+};
