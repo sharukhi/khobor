@@ -1,4 +1,4 @@
-![](app/static/cover.png)
+![](/source/app/public/cover.png)
 
 # Khobor
 
