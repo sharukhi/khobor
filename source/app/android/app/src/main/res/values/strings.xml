@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">khobor</string>
+    <string name="title_activity_main">khobor</string>
+    <string name="package_name">khobor.sharukhi.xyz</string>
+    <string name="custom_url_scheme">khobor.sharukhi.xyz</string>
+</resources>

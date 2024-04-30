@@ -1,8 +1,0 @@
-app/khobor/sharukhi/xyz/DelegationService.java
- app.khobor.sharukhi.xyz.DelegationService
-app/khobor/sharukhi/xyz/LauncherActivity.java
- app.khobor.sharukhi.xyz.LauncherActivity
-app/khobor/sharukhi/xyz/BuildConfig.java
- app.khobor.sharukhi.xyz.BuildConfig
-app/khobor/sharukhi/xyz/Application.java
- app.khobor.sharukhi.xyz.Application

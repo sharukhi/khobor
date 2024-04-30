@@ -1,4 +1,0 @@
-#Sun Apr 14 18:04:18 BDT 2024
-base.0=C\:\\Users\\Rumman\\Desktop\\khobor\\android\\app\\build\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
