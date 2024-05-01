@@ -10,29 +10,8 @@
     "start_url": "/",
     "screenshots": [
         {
-            "src": "/pwa/screenshots/1.png",
-            "sizes": "1125x2436",
-            "type": "image/png",
-            "form_factor": "narrow",
-            "label": "Screenshot"
-        },
-        {
-            "src": "/pwa/screenshots/2.png",
-            "sizes": "1125x2436",
-            "type": "image/png",
-            "form_factor": "narrow",
-            "label": "Screenshot"
-        },
-        {
-            "src": "/pwa/screenshots/3.png",
-            "sizes": "1125x2436",
-            "type": "image/png",
-            "form_factor": "narrow",
-            "label": "Screenshot"
-        },
-        {
-            "src": "/pwa/screenshots/4.png",
-            "sizes": "1125x2436",
+            "src": "/cover.png",
+            "sizes": "1280x640",
             "type": "image/png",
             "form_factor": "narrow",
             "label": "Screenshot"
