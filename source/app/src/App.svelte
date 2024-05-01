@@ -121,25 +121,101 @@
 
     <main>
       {#await getNews()}
-        <div class="grid grid-cols-1 gap-2 mt-10">
+        <div
+          class="grid grid-cols-1 gap-2 mt-10 md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2"
+        >
           <div class="w-full max-w-screen-xl px-4 py-6 mx-auto">
             <Skeleton
-              class="h-[200px] w-[385px] rounded-md opacity-5 bg-[#2f3237]"
+              class="w-full h-[180px] opacity-10 bg-[#1b2026] rounded-md"
             />
           </div>
+
           <div class="w-full max-w-screen-xl px-4 py-6 mx-auto">
             <Skeleton
-              class="h-[200px] w-[385px] rounded-md opacity-5 bg-[#2f3237]"
+              class="w-full h-[180px] opacity-10 bg-[#1b2026] rounded-md"
             />
           </div>
+
           <div class="w-full max-w-screen-xl px-4 py-6 mx-auto">
             <Skeleton
-              class="h-[200px] w-[385px] rounded-md opacity-5 bg-[#2f3237]"
+              class="w-full h-[180px] opacity-10 bg-[#1b2026] rounded-md"
             />
           </div>
+
           <div class="w-full max-w-screen-xl px-4 py-6 mx-auto">
             <Skeleton
-              class="h-[200px] w-[385px] rounded-md opacity-5 bg-[#2f3237]"
+              class="w-full h-[180px] opacity-10 bg-[#1b2026] rounded-md"
+            />
+          </div>
+
+          <div class="w-full max-w-screen-xl px-4 py-6 mx-auto">
+            <Skeleton
+              class="w-full h-[180px] opacity-10 bg-[#1b2026] rounded-md"
+            />
+          </div>
+
+          <div class="w-full max-w-screen-xl px-4 py-6 mx-auto">
+            <Skeleton
+              class="w-full h-[180px] opacity-10 bg-[#1b2026] rounded-md"
+            />
+          </div>
+
+          <div class="w-full max-w-screen-xl px-4 py-6 mx-auto">
+            <Skeleton
+              class="w-full h-[180px] opacity-10 bg-[#1b2026] rounded-md"
+            />
+          </div>
+
+          <div class="items-start w-full max-w-screen-xl px-4 py-6 mx-auto">
+            <Skeleton
+              class="w-full h-[180px] opacity-10 bg-[#1b2026] rounded-md"
+            />
+          </div>
+
+          <div class="items-start w-full max-w-screen-xl px-4 py-6 mx-auto">
+            <Skeleton
+              class="w-full h-[180px] opacity-10 bg-[#1b2026] rounded-md"
+            />
+          </div>
+
+          <div class="items-start w-full max-w-screen-xl px-4 py-6 mx-auto">
+            <Skeleton
+              class="w-full h-[180px] opacity-10 bg-[#1b2026] rounded-md"
+            />
+          </div>
+
+          <div class="items-start w-full max-w-screen-xl px-4 py-6 mx-auto">
+            <Skeleton
+              class="w-full h-[180px] opacity-10 bg-[#1b2026] rounded-md"
+            />
+          </div>
+          <div class="items-start w-full max-w-screen-xl px-4 py-6 mx-auto">
+            <Skeleton
+              class="w-full h-[180px] opacity-10 bg-[#1b2026] rounded-md"
+            />
+          </div>
+
+          <div class="items-start w-full max-w-screen-xl px-4 py-6 mx-auto">
+            <Skeleton
+              class="w-full h-[180px] opacity-10 bg-[#1b2026] rounded-md"
+            />
+          </div>
+
+          <div class="items-start w-full max-w-screen-xl px-4 py-6 mx-auto">
+            <Skeleton
+              class="w-full h-[180px] opacity-10 bg-[#1b2026] rounded-md"
+            />
+          </div>
+
+          <div class="items-start w-full max-w-screen-xl px-4 py-6 mx-auto">
+            <Skeleton
+              class="w-full h-[180px] opacity-10 bg-[#1b2026] rounded-md"
+            />
+          </div>
+
+          <div class="items-start w-full max-w-screen-xl px-4 py-6 mx-auto">
+            <Skeleton
+              class="w-full h-[180px] opacity-10 bg-[#1b2026] rounded-md"
             />
           </div>
         </div>
