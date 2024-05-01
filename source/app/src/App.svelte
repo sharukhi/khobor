@@ -3,7 +3,6 @@
   import "iconify-icon";
   import * as AlertDialog from "$lib/components/ui/alert-dialog";
   import { Skeleton } from "$lib/components/ui/skeleton";
-  import * as Sheet from "$lib/components/ui/sheet";
   import Button from "$lib/components/ui/button/button.svelte";
 
   const getNews = async () => {
@@ -21,118 +20,100 @@
         <div class="flex h-14 items-center">
           <!-- svelte-ignore a11y-invalid-attribute -->
           <div class="mr-auto">
-            <Sheet.Root>
-              <Sheet.Trigger>
-                <iconify-icon icon="pepicons-pop:menu" style="color: #bcc1d5"
-                ></iconify-icon></Sheet.Trigger
-              >
-              <Sheet.Content
-                side="left"
-                class="bg-[#0e1116] border-0 text-[#feffff]"
-              >
-                <Sheet.Header>
-                  <div
-                    class="grid grid-cols-1 gap-1 my-1 mx-1 text-left text-base black"
+            <div
+              class="grid grid-cols-1 gap-1 my-1 mx-1 text-left text-base black"
+            >
+              <div>
+                <AlertDialog.Root>
+                  <AlertDialog.Trigger>
+                    <iconify-icon
+                      icon="material-symbols:settings-outline"
+                      style="color: #bcc1d5"
+                    ></iconify-icon></AlertDialog.Trigger
                   >
-                    <div>
-                      <AlertDialog.Root>
-                        <AlertDialog.Trigger>
-                          <Button
-                            variant="ghost"
-                            class="text-[#feffff] hover:bg-[#1b2026] hover:text-[#feffff]"
-                          >
-                            <iconify-icon
-                              icon="material-symbols:info-outline"
-                              class="mr-1"
-                            ></iconify-icon> About
-                          </Button></AlertDialog.Trigger
+                  <AlertDialog.Content
+                    class="bg-[#0e1116] border-2 border-[#2f343a]"
+                  >
+                    <div class="flex items-center justify-center">
+                      <div class=" flex items-center justify-center">
+                        <div
+                          class="grid grid-cols-1 place-content-center place-items-center mx-4"
                         >
-                        <AlertDialog.Content
-                          class="bg-[#0e1116] border-2 border-[#2f343a]"
-                        >
-                          <div class="flex items-center justify-center">
-                            <div class=" flex items-center justify-center">
-                              <div
-                                class="grid grid-cols-1 place-content-center place-items-center mx-4"
-                              >
-                                <div
-                                  class="bg-white mt-14 rounded-3xl shadow-md mb-5"
-                                  style="  
+                          <div
+                            class="bg-white mt-14 rounded-3xl shadow-md mb-5"
+                            style="  
                                   border-style: solid;
                                   border-width: 2px ;
                                   border-color: #2f343a;
                                   padding: 1em 0.75em;
                                   box-shadow: 6px 6px 0px #2f343a;"
-                                >
-                                  <img
-                                    src="/khobor.svg"
-                                    alt="Icon"
-                                    class="h-[100px]"
-                                    style=""
-                                  />
-                                </div>
-                                <div>
-                                  <h3
-                                    class="black font-bold text-2xl text-[#feffff]"
-                                  >
-                                    Khobor
-                                  </h3>
-                                </div>
+                          >
+                            <img
+                              src="/khobor.svg"
+                              alt="Icon"
+                              class="h-[100px]"
+                              style=""
+                            />
+                          </div>
+                          <div>
+                            <h3 class="black font-bold text-2xl text-[#feffff]">
+                              Khobor
+                            </h3>
+                          </div>
 
-                                <div>
-                                  <p class="text-[#bdc4d7] mb-4 text-sm">
-                                    version: 1.0.0
-                                  </p>
-                                </div>
-                                <div>
-                                  <div class=" px-6 mt-6">
-                                    <div class="flex flex-col space-y-3">
-                                      <Button
-                                        class="bg-[#1b2026] border-[#2f343a] border-2 hover:bg-[#1b2026]"
-                                        href="https://github.com/sharukhi/khobor"
-                                        target="_blank"
-                                        ><iconify-icon
-                                          icon="material-symbols:star-outline"
-                                          class="mr-2"
-                                        ></iconify-icon> Give a star</Button
-                                      >
-                                      <Button
-                                        class="bg-[#1b2026] border-[#2f343a] border-2 hover:bg-[#1b2026]"
-                                        href="https://github.com/sharukhi/khobor/"
-                                        target="_blank"
-                                        ><iconify-icon
-                                          icon="mdi:github"
-                                          class="mr-2"
-                                        ></iconify-icon> Source code</Button
-                                      >
-                                      <Button
-                                        class="bg-[#1b2026] border-[#2f343a] border-2 hover:bg-[#1b2026]"
-                                        href="https://github.com/sharukhi/khobor/issues"
-                                        target="_blank"
-                                        ><iconify-icon
-                                          icon="mdi:git-issue"
-                                          class="mr-2"
-                                        ></iconify-icon> Report an issue</Button
-                                      >
-                                    </div>
-                                  </div>
-                                </div>
+                          <div>
+                            <p class="text-[#bdc4d7] mb-4 text-sm">
+                              version: 1.0.0
+                            </p>
+                          </div>
+                          <div>
+                            <div class=" px-6 mt-6">
+                              <div class="flex flex-col space-y-3">
+                                <Button
+                                  class="bg-[#1b2026] border-[#2f343a] border-2 hover:bg-[#1b2026]"
+                                  href="https://github.com/sharukhi/khobor"
+                                  target="_blank"
+                                  ><iconify-icon
+                                    icon="material-symbols:star-outline"
+                                    class="mr-2"
+                                  ></iconify-icon> Give a star</Button
+                                >
+                                <Button
+                                  class="bg-[#1b2026] border-[#2f343a] border-2 hover:bg-[#1b2026]"
+                                  href="https://github.com/sharukhi/khobor/"
+                                  target="_blank"
+                                  ><iconify-icon icon="mdi:github" class="mr-2"
+                                  ></iconify-icon> Source code</Button
+                                >
+                                <Button
+                                  class="bg-[#1b2026] border-[#2f343a] border-2 hover:bg-[#1b2026]"
+                                  href="https://github.com/sharukhi/khobor/issues"
+                                  target="_blank"
+                                  ><iconify-icon
+                                    icon="mdi:git-issue"
+                                    class="mr-2"
+                                  ></iconify-icon> Report an issue</Button
+                                >
                               </div>
                             </div>
                           </div>
-                          <AlertDialog.Footer>
-                            <AlertDialog.Cancel
-                              class="bg-[#1b2026] border-[#2f343a] border-2 hover:bg-[#1b2026] hover:text-[#feffff]"
-                              >Close</AlertDialog.Cancel
-                            >
-                          </AlertDialog.Footer>
-                        </AlertDialog.Content>
-                      </AlertDialog.Root>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </Sheet.Header>
-              </Sheet.Content>
-            </Sheet.Root>
+                    <AlertDialog.Footer class="items-align-right">
+                      <AlertDialog.Cancel
+                        class="bg-[#0e1116] border-0 hover:bg-[#0e1116]"
+                      >
+                        <Button
+                          class="bg-[#1b2026] border-[#2f343a] border-2 hover:bg-[#1b2026] hover:text-[#feffff]"
+                          >Close</Button
+                        >
+                      </AlertDialog.Cancel>
+                    </AlertDialog.Footer>
+                  </AlertDialog.Content>
+                </AlertDialog.Root>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -163,7 +144,9 @@
           </div>
         </div>
       {:then data}
-        <div class="grid grid-cols-1 gap-2 mt-10">
+        <div
+          class="grid grid-cols-1 gap-2 mt-10 md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2"
+        >
           <div class="w-full max-w-screen-xl px-4 py-6 mx-auto">
             <div class="border-solid border-[#1f2227] border-2 rounded-lg">
               <div class="p-4">

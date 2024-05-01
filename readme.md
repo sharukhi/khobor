@@ -1,30 +1,14 @@
 ![](/source/app/public/cover.png)
 
-# Khobor
+## Khobor
 
-Cut through the clutter and stay informed with the latest news. Dive deeper into the topics that matters most to you.
-
----
-
-### Description
-
-Khobor is a news app that helps you to cut through the clutter and stay informed with the latest news.
+Khobor means news in Bengali. Khobor is an app that aims to serve news based on Bangladesh with fewer distractions.
 
 ---
 
-### Setup Locally
+### Contribution
 
-First install the dependencies
-
-```bash
-pnpm install
-```
-
-and then start the development server
-
-```bash
-pnpm run dev
-```
+If you run into a bug or miss a feature, please [open an issue](https://github.com/sharukhi/khobor/issues). You can also make Khobor better by contributing.
 
 ---
 
