@@ -6,7 +6,7 @@
   import Button from "$lib/components/ui/button/button.svelte";
 
   const getNews = async () => {
-    const res = await fetch("https://khobor-api.sharukhi.xyz/news");
+    const res = await fetch("https://khobor-api-vercel.vercel.app/news");
     const data = await res.json();
     return data;
   };
