@@ -1,4 +1,16 @@
+> [!WARNING]
+> Khobor is currently broken due to dependency and library compatibility issues in the existing codebase.
+> 
+> Instead of continuing temporary fixes, the project is being rewritten from scratch with a cleaner architecture and updated dependencies.
+> 
+> The current version may contain broken features, failed builds, or unstable behavior until the rewrite is complete.
+
+
+
 ![](/source/app/public/cover.png)
+
+
+
 
 ## Khobor
 
